@@ -20,5 +20,6 @@ while cam.isOpened():
         cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 255, 0), 2)
         winsound.PlaySound('alert.wav', winsound.SND_ASYNC)
     if cv2.waitKey(10) == ord('q'):
+        cv2.destroyWindow('Spy Cam')
         break
     cv2.imshow('Spy Cam', frame1)
